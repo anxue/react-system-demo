@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+}
+.nav-left{
+    /* width: 15%; */
+    min-width: 180px;
+    height: calc(100vh);
+    /* background-color: red; */
+}
+.main {
+    flex: 1;
+    /* height: calc(100vh); */
+    background-color: #eee;
+}
+.content{
+    position: relative;
+    padding: 20px;
+    height: calc(100% - 200px);
+}

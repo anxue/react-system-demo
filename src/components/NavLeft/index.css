@@ -1,0 +1,18 @@
+.nav-left-content{
+    height: 100%;
+    background-color: rgb(0, 21, 41);
+}
+.logo{
+    text-align: center;
+    color: white;
+    padding: 20px 20px 20px 10px;
+}
+.logo-name{
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px;
+}
+.logo-img{
+    width: 50px;
+    float: left;
+}
