@@ -5,6 +5,7 @@ export default class Home extends React.Component{
         return (
             <div className="home-wrap">
                 欢迎来到安鱼oooooo的系统
+                
             </div>
         )
     }
