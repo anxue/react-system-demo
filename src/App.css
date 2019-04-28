@@ -1,5 +1,8 @@
-@import '~antd/dist/antd.css';
+/* @import '~antd/dist/antd.css'; */
 /* @import '~antd/dist/antd.less'; */
+/* body{
+  overflow-y: hidden;
+} */
 .App {
   text-align: center;
 }

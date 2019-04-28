@@ -11,9 +11,14 @@
     flex: 1;
     /* height: calc(100vh); */
     background-color: #eee;
+    overflow: auto;
+    height: 100vh;
 }
 .content{
     position: relative;
     padding: 20px;
-    height: calc(100% - 200px);
+    height: auto;
+    background: white;
+    text-align: left;
+    
 }

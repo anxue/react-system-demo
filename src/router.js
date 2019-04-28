@@ -3,6 +3,8 @@ import {HashRouter, Route, Switch} from 'react-router-dom'
 import App from './App'
 import Login from './pages/login'
 import Admin from './admin'
+import Buttons from './pages/ui/buttons'
+import NoMatch from './pages/nomatch/index'
 export default class Router extends React.Component{
 
     render() {
@@ -10,7 +12,14 @@ export default class Router extends React.Component{
             <HashRouter>
                 <App>
                     <Route path="/login" component={Login}/>
-                    <Route path="/admin" component={Admin}/>
+                    <Route path="/admin" render={()=>
+                        <Admin>
+                            <Switch>
+                                <Route path="/admin/ui/buttons" component={Buttons}></Route>
+                                <Route component={NoMatch}></Route>
+                            </Switch>
+                        </Admin>
+                    }/>
                 </App>
             </HashRouter>
         )
