@@ -4,3 +4,9 @@ button{
 .ant-card-bordered{
     margin-bottom: 10px;
 }
+.ant-spin-spinning{
+    margin-right: 10px!important;
+}
+.ant-alert-with-description{
+    margin-bottom: 10px!important;
+}

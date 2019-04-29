@@ -36,7 +36,7 @@ export default class NavLeft extends React.Component {
             <div className="nav-left-content">
                 <div className="logo">
                     <img className="logo-img" src="/assets/logoImg.png" alt="" ></img>
-                    <div className="logo-name">AnXue MS</div>
+                    <div className="logo-name">AnXue SYS</div>
                 </div>
                 <Menu theme="dark">
                     {this.state.menuTreeNode}
