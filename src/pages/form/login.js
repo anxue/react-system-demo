@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Input, Button, Card, message  } from 'antd';
+import { Form, Input, Button, Card, message, Icon, Checkbox  } from 'antd';
 import './form.css'
 const  FormItem = Form.Item;
 class LoginForm extends React.Component {
@@ -47,7 +47,7 @@ class LoginForm extends React.Component {
                                         }
                                     ]
                                 })(
-                                    <Input placeholder="请输入用户名"/>
+                                    <Input prefix={<Icon type="user" />} placeholder="请输入用户名"/>
                                 )
                             }
                         </FormItem>
@@ -66,9 +66,20 @@ class LoginForm extends React.Component {
                                         }
                                     ]
                                 })(
-                                    <Input placeholder="请输入密码"/>
+                                    <Input prefix={<Icon type="lock" />} placeholder="请输入密码"/>
                                 )
                             }
+                        </FormItem>
+                        <FormItem>
+                            {
+                                getFieldDecorator('remember', {
+                                    valuePropName: 'checked',
+                                    initialValue: true,
+                                })(
+                                    <Checkbox>记住密码</Checkbox>
+                                )
+                            }
+                            <a href="javascript:;" style={{float: "right"}}>忘记密码</a>
                         </FormItem>
                         <FormItem>
                             <Button type="primary" onClick={this.handleSubmit}>登陆</Button>
