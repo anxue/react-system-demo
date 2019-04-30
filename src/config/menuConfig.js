@@ -30,6 +30,10 @@ export default [
             {
                 title: 'Tabs标签页',
                 key: '/admin/ui/tabs'
+            },
+            {
+                title: 'Gallery',
+                key: '/admin/ui/gallery'
             }
         ]
     },

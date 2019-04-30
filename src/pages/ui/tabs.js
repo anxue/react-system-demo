@@ -5,7 +5,7 @@ const TabPane = Tabs.TabPane;
 export default class Tab extends React.Component{
     newTabIndex = 0;
     callback=(key)=>{
-        message.info('选择选项卡:'+key)
+        message.info('选择选项卡:'+ key)
     }
     componentWillMount() {
         const panes = [
