@@ -32,8 +32,12 @@ export default [
                 key: '/admin/ui/tabs'
             },
             {
-                title: 'Gallery',
+                title: '图片画廊',
                 key: '/admin/ui/gallery'
+            },
+            {
+                title: '轮播图',
+                key: '/admin/ui/carousel'
             }
         ]
     },
@@ -42,16 +46,12 @@ export default [
         key: '/admin/form',
         children: [
             {
-                title: '按钮',
-                key: '/admin/ui/buttons'
+                title: '登陆',
+                key: '/admin/form/login'
             },
             {
-                title: '弹框',
-                key: '/admin/ui/modals'
-            },
-            {
-                title: 'Loading',
-                key: '/admin/ui/loading'
+                title: '注册',
+                key: '/admin/form/register'
             }
         ]
     },

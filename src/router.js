@@ -12,6 +12,9 @@ import Notification from './pages/ui/notification'
 import Message from './pages/ui/message'
 import Tab from './pages/ui/tabs'
 import Gallery from './pages/ui/gallery'
+import Carousel from './pages/ui/carousel'
+import LoginForm from './pages/form/login'
+import Register from './pages/form/register'
 export default class Router extends React.Component{
 
     render() {
@@ -30,6 +33,9 @@ export default class Router extends React.Component{
                                 <Route path="/admin/ui/message" component={Message}></Route>
                                 <Route path="/admin/ui/tabs" component={Tab}></Route>
                                 <Route path="/admin/ui/gallery" component={Gallery}></Route>
+                                <Route path="/admin/ui/carousel" component={Carousel}></Route>
+                                <Route path="/admin/form/login" component={LoginForm}></Route>
+                                <Route path="/admin/form/register" component={Register}></Route>
                                 <Route component={NoMatch}></Route>
                             </Switch>
                         </Admin>
