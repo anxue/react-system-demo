@@ -21,10 +21,10 @@ export default class Router extends React.Component{
         return (
             <HashRouter>
                 <App>
-                    <Route path="/login" component={Login}/>
+                    <Route exact path="/" component={Login} />
                     <Route path="/admin" render={()=>
                         <Admin>
-                            <Switch>
+                            <Switch>               
                                 <Route path="/admin/home" component={Home}></Route>
                                 <Route path="/admin/ui/buttons" component={Buttons}></Route>
                                 <Route path="/admin/ui/modals" component={Modals}></Route>
