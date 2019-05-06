@@ -60,16 +60,12 @@ export default [
         key: '/admin/table',
         children: [
             {
-                title: '按钮',
-                key: '/admin/ui/buttons'
+                title: '基础表格',
+                key: '/admin/table/basicTable'
             },
             {
-                title: '弹框',
-                key: '/admin/ui/modals'
-            },
-            {
-                title: 'Loading',
-                key: '/admin/ui/loading'
+                title: '高级表格',
+                key: '/admin/table/seniorForms'
             }
         ]
     },
