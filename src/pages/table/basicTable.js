@@ -1,11 +1,15 @@
 import React from 'react'
 import {Card, Table, Modal, Button, message} from 'antd'
 import axios from './../../axios/index'
+import Utils from '../../utils/utils';
 export default class BasicTable extends React.Component{
     state = {
         data: [],
         data2: [],
         selectedRowKeys: []
+    }
+    params = {
+        page: 1
     }
 
     componentWillMount() {
@@ -35,16 +39,24 @@ export default class BasicTable extends React.Component{
     }
     // 动态获取mock数据
     request = ()=> {
+        let $this = this;
         axios.ajax({
             url: '/table/list',
             data: {
-                params: ''
+                params: {
+                    page: $this.params.page
+                }
             }
         }).then(res => {
             this.setState({
-                data2: res,
+                data2: res.data,
                 selectedRowKeys: [],
-                selectedRows: null
+                selectedRows: null,
+                pagination: Utils.pagination(res, (current) => {
+                    // console.log(res, current)
+                    $this.params.page = current;
+                    this.request();
+                })
             })
         })
     }
@@ -193,7 +205,7 @@ export default class BasicTable extends React.Component{
                     <Table 
                         rowKey="id"
                         bordered
-                        pagination={false}
+                        pagination={this.state.pagination}
                         columns={columns}
                         dataSource={this.state.data2}
                     />

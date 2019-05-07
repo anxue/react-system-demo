@@ -2,6 +2,7 @@ import React from 'react'
 import {Row, Col,Button} from 'antd'
 import './index.css'
 import Util from '../../utils/utils'
+import { Link} from 'react-router-dom'
 // import axios from '../../axios/index'
 export default class Header extends React.Component {
     state = {
@@ -36,7 +37,9 @@ export default class Header extends React.Component {
                     <Col span={24}>
                         <span style={{paddingRight: 10}}>欢迎, {this.state.userName}</span>
                         {/* <a href="#">退出</a> */}
-                        <Button type="primary" ghost>退出</Button>
+                        <Link to="/">
+                            <Button type="primary" ghost >退出</Button>
+                        </Link>
                     </Col>
                 </Row>
                 <Row className="header-breadcrumb">

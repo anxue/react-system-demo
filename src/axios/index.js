@@ -28,7 +28,7 @@ export default class Axios {
             }).then(response => {
                 if (+response.status === 200) {
                     if (+response.data.code === 0) {
-                        resolve(response.data.data)
+                        resolve(response.data)
                     } else {
                         Modal.info({
                             title: '提示',

@@ -1,4 +1,5 @@
 export default {
+    // 时间转换
     formateDate (time) {
         if (!time) return ''
         let date = new Date(time);
@@ -9,16 +10,18 @@ export default {
         (date.getMinutes() > 9 ? date.getMinutes() : '0' + date.getMinutes())  + ':' +
         (date.getSeconds() > 9 ? date.getSeconds() : '0' + date.getSeconds())
     },
+    // 分页封装
     pagination(data, callback) {
-        let page = {
+        console.log(data)
+        return {
             onChange: (current) => {
-                callback()
+                callback(current)
             },
-            current: data.result.page,
-            pageSize: data.result.page_size,
-            total: data.result.total,
+            current: data.page,
+            pageSize: data.page_size,
+            total: data.total,
             showTotal: ()=> {
-                return `共${data.result.total}条`
+                return `共${data.total}条`
             },
             showQuickJumper: true
         }
