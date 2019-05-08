@@ -1,4 +1,7 @@
 import React from 'react'
+import './index.css'
+import {Form, Input, Button} from 'antd'
+const  FormItem = Form.Item;
 // import {Route, Redirect} from 'react-router-dom'
 export default class Login extends React.Component{
     handleOnClick=()=>{
@@ -10,9 +13,23 @@ export default class Login extends React.Component{
 
     render() {
         return (
-            <div>
-                this is Login page.
-                <button onClick={this.handleOnClick}>去主页</button>
+            <div className="login">
+                <div className="login-main">
+                    <div className="login-title">登陆/注册</div>
+                    <div>
+                        <Form>
+                            <FormItem>
+                                <Input placeholder="请输入用户名"/>
+                            </FormItem>
+                            <FormItem>
+                                <Input placeholder="请输入密码"/>
+                            </FormItem>
+                            <FormItem>
+                                <Button type="primary"  onClick={this.handleOnClick}>登陆</Button>
+                            </FormItem>
+                        </Form>
+                    </div>
+                </div>
             </div>
         )
     }

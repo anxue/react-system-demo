@@ -1,0 +1,22 @@
+.login{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #cab47a;
+}
+.login .login-main{
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    background-color: white;
+    left: calc(50% - 200px);
+    top: 20%;
+    padding: 10px;
+    box-shadow:10px 10px 40px 2px #705f08;
+    border-radius: 10px;
+}
+.login .login-main .login-title{
+    padding: 15px;
+    font-size: 20px;
+    color: #134226;
+}
