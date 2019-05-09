@@ -17,6 +17,8 @@ import LoginForm from './pages/form/login'
 import Register from './pages/form/register'
 import BasicTable from './pages/table/basicTable'
 import SeniorForms from './pages/table/seniorForms'
+import City from './pages/city/index'
+import Order from './pages/order/index'
 export default class Router extends React.Component{
 
     render() {
@@ -40,6 +42,8 @@ export default class Router extends React.Component{
                                 <Route path="/admin/form/register" component={Register}></Route>
                                 <Route path="/admin/table/basicTable" component={BasicTable}></Route>
                                 <Route path="/admin/table/seniorForms" component={SeniorForms}></Route>
+                                <Route path="/admin/city" component={City}></Route>
+                                <Route path="/admin/order" component={Order}></Route>
                                 <Route component={NoMatch}></Route>
                             </Switch>
                         </Admin>

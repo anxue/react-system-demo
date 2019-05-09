@@ -46,7 +46,7 @@ export default class SeniorForms extends React.Component{
     // 删除操作
     handleDelete=(item)=> {
         console.log(item)
-        let id = item.id;
+        // let id = item.id;
         Modal.confirm({
             title: '确定',
             content: '你确定要删除这条数据吗？',
