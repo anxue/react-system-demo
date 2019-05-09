@@ -3,6 +3,7 @@ import {HashRouter, Route, Switch} from 'react-router-dom'
 import App from './App'
 import Login from './pages/login'
 import Admin from './admin'
+import Common from './common'
 import Home from './pages/home'
 import Buttons from './pages/ui/buttons'
 import Modals from './pages/ui/modals'
@@ -47,6 +48,13 @@ export default class Router extends React.Component{
                                 <Route component={NoMatch}></Route>
                             </Switch>
                         </Admin>
+                    }/>
+                    <Route path="/common" render={()=>
+                        <Common>
+                            <Switch>    
+                                <Route path="/common/order/detail/:orderId" component={Home}></Route>        
+                            </Switch>
+                        </Common>
                     }/>
                 </App>
             </HashRouter>

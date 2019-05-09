@@ -31,6 +31,7 @@ export default class Header extends React.Component {
         // })
     }
     render() {
+        const menuType = this.props.menuType;
         return (
             <div className="header">     
                 <Row className="header-top">
@@ -42,15 +43,19 @@ export default class Header extends React.Component {
                         </Link>
                     </Col>
                 </Row>
-                <Row className="header-breadcrumb">
-                    <Col span={4} className="breadcrumb-title">
-                        首页
-                    </Col>
-                    <Col span={20} className="weather">
-                        <span className="system-time">{this.state.systemTime}</span>
-                        <span className="weather-detail">晴转多云</span>
-                    </Col>
-                </Row>
+                {
+                    menuType ? '': 
+                    <Row className="header-breadcrumb">
+                        <Col span={4} className="breadcrumb-title">
+                            首页
+                        </Col>
+                        <Col span={20} className="weather">
+                            <span className="system-time">{this.state.systemTime}</span>
+                            <span className="weather-detail">晴转多云</span>
+                        </Col>
+                    </Row>
+                }
+
             </div>
         )
     }
